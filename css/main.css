@@ -2,6 +2,12 @@
 @import url(./common.css);
 
 /* header */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #f1f1f1;
+}
 
 .head {
     display: flex;
@@ -193,11 +199,99 @@
                 flex-direction: column;
                 align-items: center;
                 gap: 16px;
+
+                .clocks__title {
+                    font-size: 20px;
+                    text-transform: capitalize;
+                }
+                .clocks__price {
+                    font-size: 18px;
+                }
             }
         }
     }
 }
 
-
-
 /* clocks */
+
+/* product */
+
+.product__cards {
+    margin: 40px 0;
+    display: grid;
+    gap: 30px;
+    --columns: 4;
+    --rows: 3;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
+
+    @media (width < 1024px) {
+        --columns: 3;
+    }
+    @media (width < 768px) {
+        --columns: 2;
+    }
+    @media (width < 480px) {
+        --columns: 1;
+    }
+
+    .product__card {
+        background: #E1E1E1;
+            border-radius: 8px;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding: 22px 0 27px;
+            gap: 32px 40px;
+
+            .product__card-info {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding: 20px;
+                align-items: flex-start;
+                color: #fff;
+                position: absolute;
+                top: 0;
+
+                .product__card-sale {
+                    padding: 10px 30px;
+                    background: #323232;
+                    border-radius: 8px;
+                    
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    .product__card-btn {
+                        padding: 16px 16px 13px;
+                        background: #fff;
+                        border-radius: 8px;
+                        display: inline-block;
+                    }
+                }
+            }
+
+            .product__content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+
+                .product__title {
+                    font-size: 20px;
+                    text-transform: capitalize;
+                }
+                .product__price {
+                    font-size: 18px;
+                }
+            }
+    }
+}
+
+/* product */

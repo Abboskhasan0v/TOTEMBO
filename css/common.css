@@ -42,6 +42,15 @@ img {
     }
 }
 
+.section__title {
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 60px 0;
+}
+
 .card-lg {
     grid-column: 2 span;
     grid-row: 2 span;
