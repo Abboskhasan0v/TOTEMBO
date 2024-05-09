@@ -70,3 +70,22 @@ img {
         --columns: 2;
     }
 }
+
+.card-llg {
+    grid-column: 2 span;
+    grid-row: 3 span;
+    justify-content: space-between;
+}
+.card-ssm {
+    grid-column: 1 span;
+    grid-row: 2 span;
+    gap: 23px !important;
+
+    @media (width < 480px) {
+        grid-column: 2 span;
+    }
+
+    .news__card-content {
+        gap: 13px !important;
+    }
+}
