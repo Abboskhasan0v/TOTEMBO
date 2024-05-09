@@ -41,3 +41,23 @@ img {
         transition: 0.4s;
     }
 }
+
+.card-lg {
+    grid-column: 2 span;
+    grid-row: 2 span;
+
+    @media (width < 576px) {
+        flex-direction: column;
+    }
+}
+.card-sm {
+    --columns: 1;
+    --rows: 1;
+    flex-direction: column;
+    grid-column: var(--columns) span;
+    grid-row: var(--rows) span;
+
+    @media (width < 680px) {
+        --columns: 2;
+    }
+}
