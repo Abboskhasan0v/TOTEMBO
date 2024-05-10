@@ -31,14 +31,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 19px;
+    /* padding: 0 19px; */
     border-top: 1px solid #c4c4c4;
     border-bottom: 1px solid #c4c4c4;
     position: relative;
 
+    @media (width < 992px) {
+        padding: 20px 0;
+    }
     .nav__list {
         display: flex;
-        gap: 35px;
+        /* gap: 35px; */
 
         .nav__item {
             .nav__link {
@@ -47,6 +50,11 @@
                 text-transform: capitalize;
                 display: inline-block;
                 z-index: 2;
+                padding: 20px 25px;
+                
+                &:hover {
+                    background: #e2e2e2;
+                }
 
                 @media (width < 992px) {
                     font-size: 24px;
@@ -76,6 +84,7 @@
     .nav__icon-list {
         display: flex;
         gap: 30px;
+        margin-right: 19px;
     }
 
     .nav__burger {
@@ -301,6 +310,7 @@
 .news {
     .container {
         .news__cards {
+            padding: 40px 0 116px;
             display: grid;
             gap: 30px;
             --columns: 4;
@@ -389,3 +399,60 @@
 }
 
 /* news */
+
+/* footer */
+
+.footer {
+    background: #fff;
+    padding: 65px 0 83px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 60px;
+
+        @media (width < 992px) {
+            flex-direction: column;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            .footer__title {
+                font-weight: 400;
+                font-size: 18px;
+                letter-spacing: 2.5px;
+                color: #323232;
+            }
+            .footer__list {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .footer__item {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    @media (width < 412px) {
+                        flex-direction: column;
+                        align-items: unset;
+                    } 
+                    .footer__link {
+                        font-size: 18px;
+                        color: #000;
+                    }
+                }
+            }
+            .footer-abm {
+                gap: 16px;
+            }
+        }
+    }
+}
+
+
+
+/* footer */
